@@ -55,16 +55,39 @@
 
 # Задача 14 (ДЗ). Программа, которая принимает на вход вещественное число и показывает сумму его цифр.
 
+# хйяня какая то# n = input('Введите число: ')
+# tot = 0
+# for i in n:
+#     if i != '.':
+#         tot += int(i)
+#     else:
+#         n = float(n)
+#         if n >= 1:
+#             while n != 0:
+#                 tot += int(n % 10)
+#                 n //= 10
+#         elif n < 0:
+#             n = n * -1
+#             while n != 0:
+#                 tot += int(n % 10)
+#                 n //= 10
+#         else:
+#             tot = 0 
+# # 
+# print(tot)
+
+# n = input('Введите число: ')
+# tot = 0
+# for symbol in n:
+#     if symbol.isdigit():
+#         tot += int(symbol)
+# print(tot)
+
+# Задача 15 (ДЗ). Программа, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+
 n = input('Введите число: ')
-sum = 0
-if '-' not in n:
-    for i in n:
-        if i != 0:
-            sum += int(i)
-    # print(sum)
-else:
-    n = n * -1
-    for i in n:
-        if i != 0:
-            sum += int(i)
-print(sum)
+pro = 0
+for symbol in n:
+    if symbol.isdigit():
+        pro *= int(symbol)
+print(pro)
