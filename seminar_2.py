@@ -75,19 +75,21 @@
 #             tot = 0 
 # # 
 # print(tot)
-
+# ------------------------------------------------
 # n = input('Введите число: ')
 # tot = 0
 # for symbol in n:
 #     if symbol.isdigit():
 #         tot += int(symbol)
 # print(tot)
-
+# ------------------------------------------------
 # Задача 15 (ДЗ). Программа, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 
-n = input('Введите число: ')
-pro = 0
-for symbol in n:
-    if symbol.isdigit():
-        pro *= int(symbol)
-print(pro)
+n = int(input('Введите число: '))
+pro = 1
+list1 = []
+for i in range(1, n + 1):
+    pro *= i
+    list1.append(int(pro))
+print(f'если N = {n}, тогда ', end=" ")
+print(list1)
