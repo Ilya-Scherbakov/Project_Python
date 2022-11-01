@@ -85,11 +85,25 @@
 # ------------------------------------------------
 # Задача 15 (ДЗ). Программа, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 
+# n = int(input('Введите число: '))
+# pro = 1
+# list1 = []
+# for i in range(1, n + 1):
+#     pro *= i
+#     list1.append(int(pro))
+# print(f'если N = {n}, тогда ', end=" ")
+# print(list1)
+
+# Задача 16 (ДЗ). Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
+
 n = int(input('Введите число: '))
-pro = 1
-list1 = []
-for i in range(1, n + 1):
-    pro *= i
-    list1.append(int(pro))
-print(f'если N = {n}, тогда ', end=" ")
-print(list1)
+tot = 0
+print(f'Для N = {n}:' '{')
+for i in range (1, n + 1):
+    tot += ((1 + 1 / i) ** i)
+    print (*range(f'{i}:', tot), sep=', ')
+    # print(tot)
+print('}')
+print(*range(-number, number + 1), sep=', ')
+
+# Задача 17 (ДЗ).
