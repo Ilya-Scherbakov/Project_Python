@@ -96,14 +96,33 @@
 
 # Задача 16 (ДЗ). Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
 
-n = int(input('Введите число: '))
-tot = 0
-print(f'Для N = {n}:' '{')
-for i in range (1, n + 1):
-    tot += ((1 + 1 / i) ** i)
-    print (*range(f'{i}:', tot), sep=', ')
-    # print(tot)
-print('}')
-print(*range(-number, number + 1), sep=', ')
+# n = int(input('Введите число: '))
+# tot = 0
+# print(f'Для N = {n}:' '{')
+# for i in range (1, n + 1):
+#     tot += ((1 + 1 / i) ** i)
+#     print ((f'{i}:', tot), sep='')
+#     # print(tot)
+# print('}')
+# # print(*range(-n, n + 1), sep=', ')
+# # не получилось сделать вывод как в примере
 
-# Задача 17 (ДЗ).
+# Задача 17 (ДЗ). Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
+# Найдите произведение элементов на указанных позициях. 
+# Позиции хранятся в файле file.txt в одной строке одно число.
+# 1. Реализуйте перемешиванием
+# хз
+# import random
+
+# n = int(input('Введите количество элементов: '))
+# in_list = [i for i in range(n)]
+# out_list = in_list[:]
+# for i in range(n):
+#     index_random = random.randint(0, n - 1)
+#     temp = out_list[i]
+#     out_list[i] = out_list[index_random]
+#     out_list[index_random] = temp
+# print('исходный список', in_list)
+# print('перемешанный список', out_list)
+
+    
