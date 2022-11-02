@@ -96,3 +96,100 @@
 # first = a.index(find_str) # метод индекс ищет первое вхождение
 # second = a.index(find_str, first) # тут чето продолжит со след индекса искать
 # print(second)
+
+# Задача 22 (ДЗ). Задайте список из нескольких чисел. Программа, кот найдёт сумму эл-ов списка, стоящих на нечётной позиции.
+
+from random import * 
+
+# n = int(input('Введите кол-во элементов: '))
+# some_list = []
+# for _ in range(n):    
+#     some_list.append(randint(-12, 15)) 
+# summ = 0
+# for i in range(1, len(some_list), 2):
+#         summ += some_list[i]       
+# print(f"{some_list} -> сумма элементов на нечётных позициях: {summ}")
+
+# Задача 23 (ДЗ). Программа, которая найдёт произведение пар чисел списка. 
+                # Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+
+# n = int(input('Введите кол-во элементов: '))
+# some_list = []
+# res_list = []
+# summ = 0
+# for _ in range(n):    
+#     some_list.append(randint(-12, 15)) 
+# for i in range(len(some_list) // 2 + (len(some_list) % 2)):
+#     summ = int(some_list[i] * (some_list[len(some_list) - 1 - i]))
+#     res_list.append(summ)
+    
+# print(some_list)
+# print(res_list)
+
+
+
+#  Задача 24 (ДЗ). Задайте список из вещественных чисел. 
+                # Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+
+# from random import uniform
+
+# def list_rand_nums(count):
+#     list_nums = []
+#     for i in range(count):
+#         list_nums.append(round(uniform(1, count), 2))
+#     return list_nums
+
+
+# def dif_min_max(list_nums):
+#     num_max = list_nums[0] % 1
+#     num_min = list_nums[0] % 1
+#     for i in range(1, len(list_nums)):
+#         num = round(list_nums[i] % 1, 2)
+#         if num > num_max:
+#             num_max = num
+#         elif num < num_min:
+#             num_min = num
+
+#     result = round(num_max - num_min, 2)
+#     # print(f'мин знач {num_min}, макс: {num_max}, разница: {result}')
+#     return result
+
+# complite = list_rand_nums(int(input("введите кол-во строк: ")))
+# print(complite)
+# print(dif_min_max(complite))
+
+
+# Задача 25 (ДЗ). Программа, которая будет преобразовывать десятичное число в двоичное.
+
+# n = int(input('введите число: '))
+# b = ''
+# while n > 0:
+#     b += str(n % 2)
+#     n //= 2
+# print(b[::-1])
+
+# Задача 26 (ДЗ). Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+
+def Fibonacci(n):
+    if n in [1, 2]:                       
+        return 1
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+
+def NegaFibonacci(n):
+    if n == 1:                       
+        return 1
+    elif n == 2:                       
+        return -1
+    else:
+        num1, num2 = 1, -1
+        for i in range(2, n):
+            num1, num2 = num2, num1 - num2
+        return num2
+
+list = [0]
+userNumber = int(input('Enter any number: '))
+for e in range(1, userNumber + 1):
+    list.append(Fibonacci(e))
+    list.insert(0, NegaFibonacci(e))
+print(list)
