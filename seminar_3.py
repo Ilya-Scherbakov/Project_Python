@@ -110,6 +110,19 @@ from random import *
 #         summ += some_list[i]       
 # print(f"{some_list} -> сумма элементов на нечётных позициях: {summ}")
 
+# Решал преподаватель
+
+# count = int(input('введите кол-во элементов: '))
+# some_list = []
+# summa = 0
+# for _ in range(count):          # тут ввод руками списка
+#     number = int(input())
+#     some_list.append(number)
+
+# for idx in range(1, count, 2):
+#     summa += some_list[idx]
+# print(summa)
+
 # Задача 23 (ДЗ). Программа, которая найдёт произведение пар чисел списка. 
                 # Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
@@ -122,7 +135,11 @@ from random import *
 # for i in range(len(some_list) // 2 + (len(some_list) % 2)):
 #     summ = int(some_list[i] * (some_list[len(some_list) - 1 - i]))
 #     res_list.append(summ)
-    
+
+# Решал преподаватель
+
+
+
 # print(some_list)
 # print(res_list)
 
